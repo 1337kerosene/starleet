@@ -38,3 +38,23 @@ function skillsEffect() {
   if (!checkScroll(skills_wrap)) return;
   skills_bars.forEach((skill) => (skill.style.width = skill.dataset.progress));
 }
+
+
+//script for touch//
+
+let allimg=document.querySelectorAll('img-overlay');
+
+let hover = (e) =>{
+  e.target.classList.add('hover');
+}
+
+let end = (e) =>{
+  e.target.classList.remove('hover');
+}
+
+allimg.forEach(img =>{
+  img.addEventListener('touchmove', hover);
+  img.addEventListener('touchend', end);
+})
+
+

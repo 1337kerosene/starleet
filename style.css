@@ -416,6 +416,10 @@ nav .container {
   opacity: 1;
 }
 
+.gallery-imange:active .img-overlay {
+  opacity: 1;
+}
+
 
 /* End Team */
 

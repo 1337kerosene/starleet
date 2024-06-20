@@ -355,71 +355,68 @@ nav .container {
   justify-content: center;
 }
 
-.gallery-image {
-  position: relative;
-  overflow: hidden;
-  border-radius: 16px;
-  height: 330px;
-  width: 100%;
-  cursor: pointer;
-}
+@media(hover: hover){
+  .gallery-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    height: 330px;
+    width: 100%;
+    cursor: pointer;
+  }
 
-.gallery-image img {
-  position: absolute;
-  height: 100%;
-  width: initial;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
+  .gallery-image img {
+    position: absolute;
+    height: 100%;
+    width: initial;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 
-.gallery-image .img-overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  color: var(--whiteTwo);
-  background-color: var(--selectedButton);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 1rem 1rem;
-  opacity: 0;
-  transition: 0.5s;
-}
+  .gallery-image .img-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    color: var(--whiteTwo);
+    background-color: var(--selectedButton);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 1rem 1rem;
+    opacity: 0;
+    transition: 0.5s;
+  }
 
-.title-grid {
-  color: var(--mainColor);
-  font-weight: 600;
-  font-size: 1.6rem;
-}
+  .title-grid {
+    color: var(--mainColor);
+    font-weight: 600;
+    font-size: 1.6rem;
+  }
 
-.img-description {
-  width: 100%;
-}
+  .img-description {
+    width: 100%;
+  }
 
-.img-overlay h3 {
-  font-weight: 600;
-  text-transform: uppercase;
-  font-size: 1.5rem;
-}
+  .img-overlay h3 {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+  }
 
-.img-overlay h5 {
-  font-size: 1.15rem;
-  font-weight: 300;
-}
+  .img-overlay h5 {
+    font-size: 1.15rem;
+    font-weight: 300;
+  }
 
-.gallery-image:hover .img-overlay {
-  opacity: 1;
+  .gallery-image:hover .img-overlay {
+    opacity: 1;
+  }
 }
-
-.gallery-imange:active .img-overlay {
-  opacity: 1;
-}
-
 
 /* End Team */
 

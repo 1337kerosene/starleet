@@ -40,11 +40,3 @@ function skillsEffect() {
   if (!checkScroll(skills_wrap)) return;
   skills_bars.forEach((skill) => (skill.style.width = skill.dataset.progress));
 }
-
-document.addEventListener('DOMContentLoaded', () => {
-  imageContainers.forEach(container => {
-    container.addEventListener('click', () => {
-      container.classList.toggle('active');
-    });
-  });
-});

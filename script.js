@@ -1,6 +1,7 @@
 const skills_wrap = document.querySelector('.skills');
 const skills_bars = document.querySelectorAll('.skill-progress');
 const filter_btns = document.querySelectorAll('.filter-btn');
+const elements = document.querySelectorAll('.gallery-image:hover .img-overlay');
 
 var elem = document.querySelector('.grid');
 
@@ -52,9 +53,15 @@ let end = (e) =>{
   e.target.classList.remove('hover');
 }
 
-allimg.forEach(img =>{
-  img.addEventListener('touchmove', hover);
-  img.addEventListener('touchend', end);
-})
+elements.forEach((element) => {
+  // Add touchstart event listener
+  element.addEventListener('touchstart', () => {
+    element.classList.add('touch-hover-effect');
+  });
 
+  element.addEventListener('touchend', () => {
+    // Remove touch effect
+    element.classList.remove('touch-hover-effect');
+  });
+});
 

@@ -40,3 +40,20 @@ function skillsEffect() {
   if (!checkScroll(skills_wrap)) return;
   skills_bars.forEach((skill) => (skill.style.width = skill.dataset.progress));
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const imageContainers = document.querySelectorAll('.gallery-image');
+
+    imageContainers.forEach(container => {
+        container.addEventListener('click', () => {
+            container.classList.toggle('active');
+        });
+
+        // Remove active class when clicking outside the container
+        document.addEventListener('click', (event) => {
+            if (!container.contains(event.target)) {
+                container.classList.remove('active');
+            }
+        });
+    });
+});

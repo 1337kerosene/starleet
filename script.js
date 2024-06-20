@@ -1,7 +1,8 @@
 const skills_wrap = document.querySelector('.skills');
 const skills_bars = document.querySelectorAll('.skill-progress');
 const filter_btns = document.querySelectorAll('.filter-btn');
-const elements = document.querySelectorAll('.gallery-image:hover .img-overlay');
+const imageContainers = document.querySelectorAll('.gallery-image');
+
 
 var elem = document.querySelector('.grid');
 
@@ -40,28 +41,10 @@ function skillsEffect() {
   skills_bars.forEach((skill) => (skill.style.width = skill.dataset.progress));
 }
 
-
-//script for touch//
-
-let allimg=document.querySelectorAll('img-overlay');
-
-let hover = (e) =>{
-  e.target.classList.add('hover');
-}
-
-let end = (e) =>{
-  e.target.classList.remove('hover');
-}
-
-elements.forEach((element) => {
-  // Add touchstart event listener
-  element.addEventListener('touchstart', () => {
-    element.classList.add('touch-hover-effect');
-  });
-
-  element.addEventListener('touchend', () => {
-    // Remove touch effect
-    element.classList.remove('touch-hover-effect');
+document.addEventListener('DOMContentLoaded', () => {
+  imageContainers.forEach(container => {
+    container.addEventListener('click', () => {
+      container.classList.toggle('active');
+    });
   });
 });
-

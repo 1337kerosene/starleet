@@ -412,9 +412,10 @@ nav .container {
   font-weight: 300;
 }
 
-.gallery-image:hover .img-overlay {
+.gallery-image:hover, gallery-image:active .img-overlay {
   opacity: 1;
 }
+
 
 /* End Team */
 

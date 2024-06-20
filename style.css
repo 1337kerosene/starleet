@@ -412,7 +412,7 @@ nav .container {
   font-weight: 300;
 }
 
-.gallery-image:hover, gallery-image:active .img-overlay {
+.gallery-image:hover .img-overlay {
   opacity: 1;
 }
 
